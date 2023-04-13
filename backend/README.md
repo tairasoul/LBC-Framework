@@ -21,4 +21,4 @@ Embeds are made using the embed class.
 Eris works at a lower-ish level, compared to discord.js.
 This means that you will have to learn the Discord API a bit too.
 
-My modified files for discord-eris-embeds will be included, as I modified those a bit to add proper declaration files and add a function.
+My modified files for discord-eris-embeds will be included, as they have proper declaration files and it adds a function.
