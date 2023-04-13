@@ -112,12 +112,12 @@ local function tryExec(msg, args, playerPerms, cmdperm, player)
                         if a == 1 then
                             realmessage = string.split(args, " ")[a]
                         else
-                            realmessage = realmessage.." "..string.split(args, " ")[a]
+                            realmessage = realmessage.."&"..string.split(args, " ")[a]
                         end
                     end
                 else
                     if #string.split(args, " ") == 2 then
-                        realmessage = string.split(args, " ")[1].." "..string.split(args, " ")[2]
+                        realmessage = string.split(args, " ")[1].."&"..string.split(args, " ")[2]
                     else
                         realmessage = string.split(args, " ")[1]
                     end
