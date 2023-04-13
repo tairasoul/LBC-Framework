@@ -142,7 +142,7 @@ ws.OnMessage:Connect(function(msg)
   Framework.processWebsocket(msg)
   -- only use Framework.processWebsocket if you want to do some basic processing and then send the message to the framework, otherwise redo hostFramework.lua's steps for websocket processing.
   -- if you want to do your own processing, use Framework.tryExec(command, newmsg, playerperm, cmdperm). command being the command name, newmsg being all the args, playerperm being the permission of the user trying to send the command, and cmdperm being the permission of the command they're trying to use.
-  -- you do need the following no matter what though
+  -- you do need the following no matter what if you're doing fully custom processing
   if string.find(msg, "New player:") then
         local newMsg = string.split(msg, " ")[3]
         if not table.find(Framework.Bots, newMsg) then
