@@ -5,7 +5,7 @@ It is currently still kinda in progress, so feel free to suggest features throug
 
 # Supported executors
 
-Currently this only supports Synapse X and Script-Ware.
+Currently this supports Synapse X, Script-Ware and KRNL.
 If there are any other executors that have websocket support, open an issue and include the name of the executor and how to access its websocket library.
 
 # Documentation for hostFramework.lua
