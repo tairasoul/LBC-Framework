@@ -1,0 +1,9 @@
+{
+    "token": "",
+    "clientId": "",
+    "guildId": "",
+    "useDiscordBot": false,
+    "pollWEAOAPI": false,
+    "hostingIP": "",
+    "port": 8080
+}
