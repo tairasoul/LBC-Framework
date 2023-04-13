@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "discord-eris-embeds": "^1.0.4",
+    "discord.js": "^14.9.0",
+    "eris": "^0.17.2",
+    "node-fetch": "^3.3.1"
+  }
+}
