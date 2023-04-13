@@ -97,13 +97,7 @@ Framework.addCommand = function(name, callback, params, permLevel, ...)
     insertTable.permLevel = permLevel
     table.insert(Framework.Commands, insertTable)
     local permTableInsert = {}
-    if alias1 and alias2 then
-        permTableInsert.names = {name, alias1, alias2}
-    elseif alias1 and not alias2 then
-        permTableInsert.names = {name, alias1}
-    elseif not alias1 and not alias2 then
-        permTableInsert.names = {name}
-    end
+    permTableInsert.names = {name, alias}
     table.insert(Framework.Permissions.permissionTable.commands[permLevel], permTableInsert)
 end
 
