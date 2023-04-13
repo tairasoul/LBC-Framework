@@ -56,7 +56,8 @@ local Framework = {
     Commands = {},
     WS = null,
     Bots = {},
-    Prefix = "!"
+    Prefix = "!",
+    permissionLevels = 5
 }
 ```
 
@@ -165,7 +166,7 @@ ws.OnMessage:Connect(function(msg)
             local cmdperm
             local command = string.sub(cmd, 1, string.len(string.split(cmd, " ")[1]))
             local playerperm = WebsocketPermission
-            for i = 1, 5 do
+            for i = 1, Framework.permissionLevels do
                 for x,v in next, Framework.Permissions.permissionTable.commands[i] do
                     if table.find(v.names, command) then
                         print("found cmd")
