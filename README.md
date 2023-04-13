@@ -8,11 +8,9 @@ It is currently still kinda in progress, so feel free to suggest features throug
 Currently this only supports Synapse X and Script-Ware.
 If there are any other executors that have websocket support, open an issue and include the name of the executor and how to access its websocket library.
 
-# Documentation
+# Documentation for hostFramework.lua
 
-## hostFramework.lua
-
-##### What you have access to
+## What you have access to
 
 From the start, you have access to this table.
 ```lua
@@ -64,7 +62,7 @@ local Framework = {
 
 This is mostly used internally, but you can use the ShortenedNameFinder and the WS object to do some custom things, or change prefix.
 
-##### Adding custom permission levels
+## Adding custom permission levels
 
 To add custom permission levels, you simply do
 
@@ -86,7 +84,7 @@ Framework.savePermWhitelist(filePath) -- filePath is the path to a file, relativ
 
 To read it, you do the same but with readPermWhitelist.
 
-##### Adding commands
+## Adding commands
 
 To add a command, you do
 
@@ -96,7 +94,7 @@ Framework.addCommand(name, callback, params, permLevel, aliases) -- Callback is 
 
 Keep in mind you must register the command on both the client and the host, with appropriate functions on both ends.
 
-##### Processing chat messages
+## Processing chat messages
 
 By processing chat messages, you can use the permission system to whitelist people to certain levels of commands.
 
@@ -115,7 +113,7 @@ end)
 OnMessageEvent.OnClientEvent:Connect(Framework.processChatMessage)
 ```
 
-##### Processing websocket messages
+## Processing websocket messages
 
 The framework automatically starts processing websocket messages, so you'll have to change the Connect command to process them, or do it manually.
 
@@ -199,6 +197,7 @@ ws.OnMessage:Connect(function(msg)
     end
     -- these are important for internal use
 end)
+```
 
 From there on, you have to do the initialization to the server.
 The initialization is
@@ -220,6 +219,26 @@ Framework.Connect(wsaddress) -- wsaddress being ws://address:port
 
 This will connect you to the websocket, and initialize with the server.
 You do not need to set up manual websocket message processing after doing this.
+
+# Documentation for clientFramework.lua
+
+## This documentation doesn't really have much, as the bots do little to no processing.
+
+## Adding commands
+
+To add a command, you simply do
+
+```lua
+Framework.addCommand(commandName, function) -- function gets a param passed to it, remember to have that in the function() thing.
+```
+
+## Connecting to the websocekt
+
+To connect to the websocket and initialize with the server and the host, you do
+
+```lua
+Framework.Connect(wsaddress) -- wsaddress being ws://address:port
+```
 
 # Unrelated info
 
