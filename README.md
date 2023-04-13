@@ -1,2 +1,4 @@
 # LBC-Framework
-A framework for making a bot control using a websocket backend.
+
+This is a framework for making bot controls using a websocket-based backend.
+It is currently still kinda in progress, so feel free to suggest features through Issues.
