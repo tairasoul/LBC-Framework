@@ -241,6 +241,10 @@ To connect to the websocket and initialize with the server and the host, you do
 Framework.Connect(wsaddress) -- wsaddress being ws://address:port
 ```
 
+# Extra info
+
+Trello page is at https://trello.com/b/64dkdM47/lbc-framework
+
 # Unrelated info
 
 LBC came from the roblox username I was using when testing my original bot control, username being ALiteralBaseplate and display name being LiteralBaseplate (the game I was testing on was A Literal Baseplate), and the BC coming from the fact that I was making a bot control.
