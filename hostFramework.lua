@@ -26,6 +26,8 @@ local function FindName(name)
     end
 end
 
+local permissionLevels = 5
+
 local Framework = {
     ShortenedNameFinder = function(name)
         for _, v in next, game.Players:GetPlayers() do
@@ -75,6 +77,7 @@ Framework.addPermission = function(permission)
     Framework.Permissions.permissionTable.players[permission] = {}
     Framework.Permissions.permissionTable.commands[permission + 1] = {}
     Framework.Permissions.permPermissionTable.players[permision + 1] = {plr.Name}
+    permissionLevels = table.maxn(Framework.Permissions.permissionTable.players)
     table.remove(Framework.Permissions.permPermissionTable.players[permission - 1], table.find(Framework.Permissions.permPermissionTable.players[permission - 1], plr.name))
 end
 
@@ -134,14 +137,14 @@ Framework.processChatMessage = function(data)
     local message = tostring(data.Message)
     print(player.." "..message)
     local playerperm, cmdperm
-    for i = 1, 4 do
+    for i = 1, permissionLevels - 1 do
         if table.find(permissionTable.players[i], player) then
             print("found perm ")
             playerperm = i
         end
     end
     if not playerperm then
-        for i = 1, 5 do
+        for i = 1, permissionLevels do
             if table.find(permPermissionTable.players[i], player) then
                 print("found perm ")
                 playerperm = i
@@ -151,7 +154,7 @@ Framework.processChatMessage = function(data)
     if string.sub(message, 1, 1) == Framework.Prefix then
         local newmsg = ""
         local command = string.sub(message, 2, string.len(string.split(message, " ")[1]))
-        for i = 1, 5 do
+        for i = 1, permissionLevels do
             for x,v in next, permissionTable.commands[i] do
                 if table.find(v.names, command) then
                     print("found cmd ")
@@ -195,7 +198,7 @@ Framework.processWebsocket = function(msg)
             local cmdperm
             local command = string.sub(cmd, 1, string.len(string.split(cmd, " ")[1]))
             local playerperm = WebsocketPermission
-            for i = 1, 5 do
+            for i = 1, permissionLevels do
                 for x,v in next, Framework.Permissions.permissionTable.commands[i] do
                     if table.find(v.names, command) then
                         print("found cmd")
