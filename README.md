@@ -242,4 +242,4 @@ Framework.Connect(wsaddress) -- wsaddress being ws://address:port
 
 # Unrelated info
 
-LBC came from the roblox username I was using when testing my original bot control, username being LiteralBaseplate, and the BC coming from the fact that I was making a bot control.
+LBC came from the roblox username I was using when testing my original bot control, username being ALiteralBaseplate and display name being LiteralBaseplate (the game I was testing on was A Literal Baseplate), and the BC coming from the fact that I was making a bot control.
