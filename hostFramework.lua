@@ -66,7 +66,6 @@ local Framework = {
         }
     },
     Commands = {},
-    Whitelists = {},
     WS = null,
     Bots = {},
     Prefix = "!"
