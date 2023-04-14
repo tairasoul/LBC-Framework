@@ -1,4 +1,4 @@
-# LBC-Framework
+d# LBC-Framework
 
 This is a framework for making bot controls using a websocket-based backend.
 It is currently still kinda in progress, so feel free to suggest features through Issues.
@@ -244,6 +244,8 @@ Framework.Connect(wsaddress) -- wsaddress being ws://address:port
 # Extra info
 
 Trello page is at https://trello.com/b/64dkdM47/lbc-framework
+
+We have a Discord too, at https://discord.gg/P9K3maxFAn
 
 # Unrelated info
 
