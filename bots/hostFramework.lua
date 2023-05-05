@@ -1,12 +1,12 @@
 -- this is the framework for the host client, the client which processes everything
 
-local Services = loadstring(game:HttpGet('https://raw.githubusercontent.com/fheahdythdr/FloppaMods/main/Utilities/Services.lua'))()
+local Services = loadstring(game:HttpGet('https://raw.githubusercontent.com/fheahdythdr/legendary-train/main/Utilities/Utilities.lua'))()
 local plr = game:GetService'Players'.LocalPlayer; local plrs = plr.Parent
 local plrw = plr.Character
 local plrh = plrw:FindFirstChild('Humanoid')
 local plrhrp = plrw:FindFirstChild('HumanoidRootPart')
 local HTTP = Services["HttpService"]
-local Send = loadstring(game:HttpGet('https://raw.githubusercontent.com/fheahdythdr/FloppaMods/main/Utilities/Notifications.lua'))():Init()
+local Send = loadstring(game:HttpGet('https://raw.githubusercontent.com/fheahdythdr/legendary-train/main/Utilities/Notifications.lua'))():Init()
 plr.CharacterAdded:Connect(function(nchar)
     plrhrp = nchar:WaitForChild('HumanoidRootPart')
     plrw = nchar
