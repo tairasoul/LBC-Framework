@@ -13,6 +13,12 @@ plr.CharacterAdded:Connect(function(nchar)
     plrh = plrw.Humanoid
 end)
 
+local web = (syn and syn.websocket) or (WebSocket) or nil
+
+if web == nil then
+    error("Your executor does not support WebSocket, or it is not implemented in the src of hostFramework.lua.")
+end
+
 local function FindName(name)
     for _, v in next, game.Players:GetPlayers() do
         local subbedname = string.sub(v.Name:lower(), 1, string.len(name))
@@ -231,7 +237,7 @@ Framework.processWebsocket = function(msg)
 end
 
 Framework.Connect = function(wsaddress)
-    Framework.WS = syn.websocket.connect(wsaddress)
+    Framework.WS = web.connect(wsaddress)
     Framework.WS.OnMessage:Connect(Framework.processWebsocket)
     Framework.WS:send("HostConnect")
     Framework.WS:send("getOldPlayerList")
