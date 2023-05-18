@@ -16,7 +16,7 @@ end)
 local web = (syn and syn.websocket) or (WebSocket) or nil
 
 if web == nil then
-    error("Your executor does not support WebSocket, or it is not implemented in the src of hostFramework.lua.")
+    error("Your executor does not support WebSocket, or it is not implemented in the src of clientFramework.lua.")
 end
 
 local function FindName(name)
@@ -48,7 +48,8 @@ local Framework = {
     Commands = {},
     Websocket = null,
     Bots = {},
-    BotNumber = null
+    BotNumber = null,
+    ExecutorWebsocket = web
 }
 
 Framework.addCommand = function(command, func)
