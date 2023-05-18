@@ -76,7 +76,8 @@ local Framework = {
     Commands = {},
     WS = null,
     Bots = {},
-    Prefix = "!"
+    Prefix = "!",
+    ExecutorWebsocket = web
 }
 
 Framework.addPermission = function(permission)
