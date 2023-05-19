@@ -57,7 +57,8 @@ local Framework = {
     WS = null,
     Bots = {},
     Prefix = "!",
-    permissionLevels = 5
+    permissionLevels = 5,
+    ExecutorWebsocket = <exec websocket lib>
 }
 ```
 
