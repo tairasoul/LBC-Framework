@@ -247,8 +247,6 @@ Framework.Connect(wsaddress) -- wsaddress being ws://address:port
 
 Trello page is at https://trello.com/b/64dkdM47/lbc-framework
 
-We have a Discord too, at https://discord.gg/P9K3maxFAn
-
 # Unrelated info
 
 LBC came from the roblox username I was using when testing my original bot control, username being ALiteralBaseplate and display name being LiteralBaseplate (the game I was testing on was A Literal Baseplate), and the BC coming from the fact that I was making a bot control.
