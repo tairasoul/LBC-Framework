@@ -1,3 +1,5 @@
+# As of recently, this will likely no longer be relevant, due to Synapse now working with Roblox and other executors shutting down.
+
 # LBC-Framework
 
 ~~This is a framework for making bot controls using a websocket-based backend.
